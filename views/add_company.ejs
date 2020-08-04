@@ -1,0 +1,208 @@
+<html>
+<head>
+    <title>FirstCare</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="C:\Users\Joyeeta\Desktop\icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <style>
+        @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+        @import url("https://fonts.googleapis.com/css?family=Cairo&display=swap");
+
+        body{
+            background: linear-gradient(to top, #0099ff 0%, #33cccc 80%);
+        }
+        #login-container{
+            width: 450px;
+            height: 375px;
+            background-color:  #248f8f;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        #login-container h3{
+            font-family: 'Cairo', sans-serif;
+            font-weight: normal;
+            text-align: center;
+            color: #ffffff;
+            font-size: 2rem;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        #login-container hr{
+            margin-top: 15px;
+            margin-bottom: 2.7rem;
+            width: 250px;
+            border-color: #ffffff;
+        }
+        #login-container .input-group{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        #login-container .input-group span{
+            background-color: #0e1a35;
+            color: #ffffff;
+            border-color: #004c40;
+            border-radius: 10px 0px 0px 10px;
+        }
+        #login-container .input-group input{
+            border: 1px solid #00796b;
+            border-radius: 0px 10px 10px 0px;
+            font-family: 'Cairo', sans-serif;
+        }
+        #login-container .input-group input:focus{
+            box-shadow: none;
+            border: 1px solid #00796b;
+        }
+
+        .container-checkbox {
+            display: block;
+            position: relative;
+            padding-left: 55px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            color: #ffffff;
+            font-size: 15px;
+        }
+
+        /* Hide the browser's default checkbox */
+        .container-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        /* On mouse-over, add a grey background color */
+        .container-checkbox:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .container-checkbox input:checked ~ .checkmark {
+            background-color: #004c40;
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+        .container-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+        .container-checkbox .checkmark:after {
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .btn-customized{
+            background-color: #004c40;
+            margin-top: 30px;
+            color: #ffffff;
+            border-color: #004c40;
+            font-family: 'Cairo', sans-serif;
+            border-radius: 10px;
+        }
+
+        .btn-customized:hover, .btn-customized:focus, .btn-customized:active{
+            color: #ffffff;
+            border-color: #004c40;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">
+        <img src="C:\Users\Joyeeta\Desktop\icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+        FirstCare
+    </a>
+    </a>
+</nav>
+<div id="login-container">
+    <h3>Account Sign Up</h3>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="/add_company" method="POST">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="username-label">
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="username-label" lass="form-control input-md" required="">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="companyname-label">
+                                <i class="fa fa-building" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" name="company" placeholder="Company Name" aria-label="Company Name" aria-describedby="name-label" lass="form-control input-md" required="">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="email-label">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email " aria-describedby="email-label" lass="form-control input-md" required="">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="password-label">
+                                <i class="fa fa-key" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-label" lass="form-control input-md" required="">
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-customized">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

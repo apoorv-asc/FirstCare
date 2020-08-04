@@ -1,0 +1,14 @@
+<%- include ("partials/header"); %>
+            <div class="user-dashboard">
+                <h1>Add Medicines</h1><br><br>
+                <h2><b><%=companyis %></b></h2><br><br>
+                <form action="/deletemeds", method="POST">
+                    <div class="container" style="font-size: large">
+                        <label for="mname">Medicine Name  </label>
+                        <input  type="text" id="mname" name="medname" placeholder="Medicine name"><br><br>
+
+                        <button class="btn"><i class="fa fa-trash"></i> Delete</button>
+                    </div>
+                </form>
+            </div>
+<%- include ("partials/footer"); %>

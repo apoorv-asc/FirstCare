@@ -1,0 +1,20 @@
+<%- include ("partials/header"); %>
+            <div class="user-dashboard">
+                <h1>UPDATE Medicines</h1><br><br>
+                <h2><b><%=companyis %></b></h2><br><br>
+                <form action="/updatemeds", method="post">
+                    <div class="container" style="font-size: large">
+                        <label for="mname">Medicine Name  </label>
+                        <input  type="text" id="mname" name="medname" placeholder="Medicine name"><br><br>
+
+                        <label for="mprice">Price  </label>
+                        <input type="text" id="mprice" name="mprice" placeholder="Medicine Price"><br><br>
+
+                        <label for="qty">Quantity  </label>
+                        <input type="number" id="qty" name="qty" placeholder="Qty"><br><br>
+
+                        <button class="btn"><i class="fa fa-edit"></i> Update</button>
+                    </div>
+                </form>
+            </div>
+<%- include ("partials/footer"); %>

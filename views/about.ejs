@@ -1,0 +1,541 @@
+<html>
+<head>
+    <title>FirstCare</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRYFA2Ch1DHFrWXrBrr2W4aC8pgwNKKWAXe7E26fdGd4uP-2AsE&usqp=CAU">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <style>
+        /*Main CSS*/
+
+        a:focus,a:hover,a{
+            outline:none;
+            text-decoration: none;
+        }
+        li,ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .header-top i {
+            font-size: 18px;
+        }
+        .bg-image {
+            background: url(../images/background-login.jpg) no-repeat 0 0 / cover;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: table;
+        }
+        .tab-content .tab-pane {
+            padding: 70px 0;
+        }
+
+        /*Home Page*/
+
+        .home {
+            background: linear-gradient(to bottom, #00cc99 0%, #ccffcc 100%);
+        }
+
+        #navigation {
+            background: #006666;
+
+        }
+
+        #navigation {
+            padding: 0;
+        }
+
+        .display-table {
+            display: table;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .display-table-row {
+            display: table-row;
+            height: 100%;
+        }
+
+        .display-table-cell {
+            display: table-cell;
+            float: none;
+            height: 100%;
+        }
+
+        .v-align {
+            vertical-align: top;
+        }
+        .logo img {
+            max-width: 180px;
+            padding: 16px 0 17px;
+            width: 100%;
+        }
+
+        .header-top {
+            margin: 0;
+            padding-top: 2px;
+        }
+
+        .header-top img {
+            border-radius: 50%;
+            max-width: 48px !important;
+            width: 100%;
+        }
+
+        .header-rightside .nav > li > a:focus,
+        .header-rightside .nav > li > a:hover {
+            background: none;
+            text-decoration: none;
+        }
+
+
+        .header-top i {
+            color: #004d4d;
+        }
+
+        .icon-info {
+            position: relative;
+        }
+        .navi i {
+            font-size: 20px;
+        }
+
+        .icon-info .label {
+            border: 2px solid #ffffff;
+            font-weight: 500;
+            padding: 3px 5px;
+            text-align: center;
+        }
+
+        .header-top li {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .header-top .dropdown-toggle {
+            color: #004d4d;
+        }
+
+        .header-top .dropdown-menu {
+            border: medium none;
+            left: -85px;
+            padding: 17px;
+        }
+        .view {
+            background: #00cc99 none repeat scroll 0 0;
+            border-radius: 100px;
+            color: #ffffff;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 10px;
+            padding: 10px 15px;
+        }
+
+        .navbar-content > span {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .img-responsive {
+            width: 100%;
+        }
+        #navigation{
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        header {
+            background: #ffffff none repeat scroll 0 0;
+            box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
+            display: inline-block !important;
+            line-height: 23px;
+            padding: 15px;
+            transition: all 0.5s ease 0s;
+            width: 100%;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .logo {
+            text-align: center;
+        }
+
+        .navi a {
+            border-bottom: 1px solid #004d4d;
+            border-top: 1px solid #004d4d;
+            color: #ffffff;
+            display: block;
+            font-size: 17px;
+            font-weight: 500;
+            padding: 28px 20px;
+            text-decoration: none;
+        }
+
+        .navi i {
+            margin-right: 15px;
+            color: #00cc99;
+        }
+
+        .navi .active a {
+            background: #004d4d;
+            border-left: 5px solid #00cc99;
+            padding-left: 15px;
+        }
+
+        .navi a:hover {
+            background: #004d4d none repeat scroll 0 0;
+            border-left: 5px solid #00cc99;
+            display: block;
+            padding-left: 15px;
+        }
+
+        .navbar-default {
+            background-color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .navbar-toggle {
+            border: none;
+        }
+
+        .navbar-default .navbar-toggle:focus,
+        .navbar-default .navbar-toggle:hover {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #0e1a35;
+        }
+
+        .circle-logo {
+            margin: 0 auto;
+            max-width: 30px !important;
+            text-align: center;
+        }
+        .hidden-xs{
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        .user-dashboard {
+            padding: 0 20px;
+        }
+
+        .user-dashboard h1 {
+            color: #0e1a35;
+            font-size: 30px;
+            font-weight: 500;
+            margin: 0;
+            padding: 21px 0;
+        }
+        .shield-buttons {
+            display: none;
+        }
+        .close, .close:focus, .close:hover {
+            color: #fff;;
+            opacity: 1;
+            text-shadow: none;
+        }
+        .container {
+            position: relative;
+        }
+
+        /* Bottom right text */
+        .text-block {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: black;
+            color: white;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        h3 {
+            outline: darkslategrey solid 10px;
+            background-color: #0b2b58;
+            color: white;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type=text], select {
+            width: 60%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 24px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 60%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .btn {
+            background-color: #006666;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        * {box-sizing: border-box}
+
+        /* Set height of body and the document to 100% */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Style tab links */
+        .tablink {
+            background-color: #555;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 20px;
+            width: 50%;
+        }
+
+        .tablink:hover {
+            background-color: #777;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: black;
+            display: none;
+            padding: 100px 20px;
+            height: 100%;
+        }
+        .column {
+            float: left;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+        /* Display the columns below each other instead of side by side on small screens */
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        /* Add some shadows to create a card effect */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Some left and right padding inside the container */
+        .container {
+            padding: 0 16px;
+        }
+
+        /* Clear floats */
+        .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .title {
+            color: grey;
+        }
+
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 381px;
+            background-color: teal;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: black;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover, a:hover {
+            opacity: 0.7;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+        }
+
+
+
+    </style>
+<body class="home">
+<div class="container-fluid display-table">
+    <div class="row display-table-row">
+        <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+            <div class="navi">
+                <ul>
+                    <li class="active"><a href="/customer/dashboard"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                    <li><a href="/customer/view_medicines"><i class="fa fa-medkit" aria-hidden="true"></i><span class="hidden-xs hidden-sm">View Medicines</span></a></li>
+                    <li><a href="/customer/view_medicines_by"><i class="fa fa-search" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Search By</span></a></li>
+                    <li><a href="/customer/orders"><i class="fa fa-history" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Purchase History</span></a></li>
+                    <li><a href="/about"><i class="fa fa-edit" aria-hidden="true"></i><span class="hidden-xs hidden-sm">About</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10 col-sm-11 display-table-cell v-align">
+            <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+            <div class="row">
+                <header>
+                    <div class="col-md-7">
+                        <nav class="navbar-default pull-left">
+                            <div class="navbar-header" >
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRYFA2Ch1DHFrWXrBrr2W4aC8pgwNKKWAXe7E26fdGd4uP-2AsE&usqp=CAU" width="30" height="30" class="d-inline-block align-top" alt="">
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="header-rightside">
+                            <ul class="list-inline header-top pull-right">
+                                <a class="icon-info">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="navbar-content">
+                                                <div class="divider">
+                                                </div>
+                                                <a href="/" class="view btn-sm active">Logout</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <br>
+            <br>
+
+            <div class="user-dashboard">
+
+                <h3><b>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRYFA2Ch1DHFrWXrBrr2W4aC8pgwNKKWAXe7E26fdGd4uP-2AsE&usqp=CAU" width="30" height="30" class="d-inline-block align-top" alt="">
+                    FirstCare: India’s Leading Online Pharmacy & Healthcare Platform</h3><br>
+                <h3>FirstCare is a digital consumer healthcare platform that makes healthcare accessible, understandable, and affordable. It allows users to find information about medicines prescribed by doctors and also buy it. Users can find drugs by companies, and brands.
+
+                    The company empowers Indian consumers and caregivers to select the appropriate healthcare service at the best possible price. FirstCare was launched in 2020 and its operations are headquartered in Chennai, Tamil Nadu, India.</h3>
+                <h2 style="text-align:center">Our Team</h2><br>
+                <div class="column">
+                <div class="card">
+                    <img src="" alt="Joyeeta Dey" style="width:381px; height:330px;">
+                    <h1>Joyeeta Dey</h1>
+                    <p class="title">CEO & Co-Founder</p>
+                    <p>VIT University, Chennai</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+            </div>
+                <div class="column">
+                <div class="card">
+                    <img src="" alt="Apoorv Singh Chauhan" style="width:381px; height:330px;">
+                    <h1>Apoorv Singh Chauhan</h1>
+                    <p class="title">CEO & Co-Founder</p>
+                    <p>VIT University,Chennai</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

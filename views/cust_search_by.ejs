@@ -1,0 +1,51 @@
+<%- include ("partials/cust_header"); %>
+                <div class="user-dashboard">
+                <h3><br>
+                    <img src="C:\Users\Joyeeta\Desktop\icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+                FirstCare: India’s Leading Online Pharmacy & Healthcare Platform
+                </h3><br>
+                <br>
+                <button class="tablink" onclick="openPage('Medicine', this, '#009999')">Medicine Name</button>
+                <button class="tablink" onclick="openPage('Company', this, '#006666')" id="defaultOpen">Company Name</button>
+                <div id="Medicine" class="tabcontent">
+                    <h2>Search By Medicines</h2>
+                    <div class="search-container">
+                        <form action="/customer/view_medicines/medicine" method="POST">
+                            <input type="text" placeholder="Medicine Name.." name="search">
+                            <button class="btn" type="submit"><i class="fa fa-search"></i>Search</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="Company" class="tabcontent">
+                    <h2>Search By Company</h2>
+                    <div class="search-container">
+                        <form action="/customer/view_medicines/company" method="POST">
+                            <input type="text" placeholder="Company Name.." name="search">
+                            <button class="btn" type="submit"><i class="fa fa-search"></i>Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>

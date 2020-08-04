@@ -1,0 +1,23 @@
+<%- include ("partials/header"); %>
+            <div class="user-dashboard">
+                <span style="font-size: 40px; text-align: center;padding: 0px 30%;" ><b><%=companyis %></b></span>
+                <br><br><br>
+                <table>
+                    <tr>
+                      <th>Company Name</th>
+                      <th>Medicine Name</th>
+                      <th>Price</th>
+                      <th>Stock Available</th>
+                    </tr>
+                    <% Object.keys(result).forEach(function(key){ %>
+                    <%    var row = result[key]; %>
+                    <tr>
+                        <td><%= row.company_name %></td>
+                        <td><%= row.med_name %></td>
+                        <td><%= row.price %></td>
+                        <td><%= row.quantity %></td>
+                    </tr>
+                    <% }); %>
+                </table>
+            </div>
+<%- include ("partials/footer"); %>

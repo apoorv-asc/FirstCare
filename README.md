@@ -5,4 +5,4 @@ An E-Pharmacy Portal build with the help of NodeJs, Express and EJS.Allows compa
 
 * Programmed the retailer and the customer side of an e-commerce website using NodeJS 
 * Implemented user authentication features(login, logout, register) from scratch. 
-* The Web Application connects to connects to remote SQL backend database server
+* The Web Application connects to remote SQL backend database server.

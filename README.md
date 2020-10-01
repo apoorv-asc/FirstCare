@@ -1,5 +1,5 @@
 # FirstCare
-An E-Pharmacy Portal build with the help of NodeJs, Express and EJS.Allows companies and wholesale medicine sellers to add medicines on the portal so that people can see the available medicines and buy them as per their needs
+An E-Pharmacy Portal build with the help of NodeJs, Express and EJS. The application allows companies and wholesale medicine sellers to add medicines on the portal so that people can see the available medicines and buy them as per their needs
 
 ## Key Features
 

@@ -361,5 +361,5 @@ app.post('/deletemeds',function(req,res){
 // =================================
 
 app.listen(27017,process.env.IP,function(){
-    console.log("Server started...");
+    console.log("Server started on port 27017...");
 })
